@@ -1,0 +1,84 @@
+2022-10-07 21:35:02 [    INFO]----start--------start--------start--------start--------start--------start----开始执行登陆操作----start--------start--------start--------start--------start--------start---- (login.py:17)
+2022-10-07 21:35:03 [    INFO]成功登录 (login.py:89)
+2022-10-07 21:35:03 [    INFO]----start--------start--------start--------start--------start--------start----查询可选库区类型----start--------start--------start--------start--------start--------start---- (test_basic_inquire.py:27)
+2022-10-07 21:35:03 [ WARNING]
+用例ID：WMS_JCCX_01
+用例标题：查询可选库区类型
+请求方式：get
+URL:/api/v1/basic/dict/item/WH0003/list
+用例期望值：success=true
+实际返回：{"errCode":"11006","errMessage":"无效的token!","success":false} (test_basic_inquire.py:43)
+2022-10-07 21:35:03 [    INFO]___end______end______end______end______end______end___查询可选库区类型___end______end______end___ (test_basic_inquire.py:44)
+2022-10-07 21:35:04 [    INFO]----start--------start--------start--------start--------start--------start----查询可选温区类型----start--------start--------start--------start--------start--------start---- (test_basic_inquire.py:27)
+2022-10-07 21:35:04 [ WARNING]
+用例ID：WMS_JCCX_02
+用例标题：查询可选温区类型
+请求方式：get
+URL:/api/v1/basic/dict/item/WH0004/list
+用例期望值：success=true
+实际返回：{"errCode":"11006","errMessage":"无效的token!","success":false} (test_basic_inquire.py:43)
+2022-10-07 21:35:04 [    INFO]___end______end______end______end______end______end___查询可选温区类型___end______end______end___ (test_basic_inquire.py:44)
+2022-10-07 21:35:04 [    INFO]----start--------start--------start--------start--------start--------start----查询可选库位类型----start--------start--------start--------start--------start--------start---- (test_basic_inquire.py:27)
+2022-10-07 21:35:04 [ WARNING]
+用例ID：WMS_JCCX_03
+用例标题：查询可选库位类型
+请求方式：get
+URL:/api/v1/basic/dict/item/WH0038/list
+用例期望值：success=true
+实际返回：{"errCode":"11006","errMessage":"无效的token!","success":false} (test_basic_inquire.py:43)
+2022-10-07 21:35:04 [    INFO]___end______end______end______end______end______end___查询可选库位类型___end______end______end___ (test_basic_inquire.py:44)
+2022-10-07 21:35:04 [    INFO]----start--------start--------start--------start--------start--------start----查询可选货主----start--------start--------start--------start--------start--------start---- (test_basic_inquire.py:27)
+2022-10-07 21:35:05 [ WARNING]
+用例ID：WMS_JCCX_04
+用例标题：查询可选货主
+请求方式：get
+URL:/api/v1/basic/mainInfo/getAllMain?state=1
+用例期望值：success=true
+实际返回：{"errCode":"11006","errMessage":"无效的token!","success":false} (test_basic_inquire.py:43)
+2022-10-07 21:35:05 [    INFO]___end______end______end______end______end______end___查询可选货主___end______end______end___ (test_basic_inquire.py:44)
+2022-10-07 21:35:05 [    INFO]----start--------start--------start--------start--------start--------start----查询可选入库业务类型----start--------start--------start--------start--------start--------start---- (test_basic_inquire.py:27)
+2022-10-07 21:35:05 [ WARNING]
+用例ID：WMS_JCCX_05
+用例标题：查询可选入库业务类型
+请求方式：get
+URL:/api/v1/basic/dict/item/WH0030/list
+用例期望值：success=true
+实际返回：{"errCode":"11006","errMessage":"无效的token!","success":false} (test_basic_inquire.py:43)
+2022-10-07 21:35:05 [    INFO]___end______end______end______end______end______end___查询可选入库业务类型___end______end______end___ (test_basic_inquire.py:44)
+2022-10-07 21:35:05 [    INFO]----start--------start--------start--------start--------start--------start----查询可用到货方式----start--------start--------start--------start--------start--------start---- (test_basic_inquire.py:27)
+2022-10-07 21:35:06 [ WARNING]
+用例ID：WMS_JCCX_06
+用例标题：查询可用到货方式
+请求方式：get
+URL:/api/v1/basic/dict/item/WO0003/list
+用例期望值：success=true
+实际返回：{"errCode":"11006","errMessage":"无效的token!","success":false} (test_basic_inquire.py:43)
+2022-10-07 21:35:06 [    INFO]___end______end______end______end______end______end___查询可用到货方式___end______end______end___ (test_basic_inquire.py:44)
+2022-10-07 21:35:06 [    INFO]----start--------start--------start--------start--------start--------start----查询可选商品类型----start--------start--------start--------start--------start--------start---- (test_basic_inquire.py:27)
+2022-10-07 21:35:06 [ WARNING]
+用例ID：WMS_JCCX_07
+用例标题：查询可选商品类型
+请求方式：get
+URL:/api/v1/basic/dict/item/WH0037/list
+用例期望值：success=true
+实际返回：{"errCode":"11006","errMessage":"无效的token!","success":false} (test_basic_inquire.py:43)
+2022-10-07 21:35:06 [    INFO]___end______end______end______end______end______end___查询可选商品类型___end______end______end___ (test_basic_inquire.py:44)
+2022-10-07 21:35:06 [    INFO]----start--------start--------start--------start--------start--------start----查询可选出库业务类型----start--------start--------start--------start--------start--------start---- (test_basic_inquire.py:27)
+2022-10-07 21:35:07 [ WARNING]
+用例ID：WMS_JCCX_08
+用例标题：查询可选出库业务类型
+请求方式：get
+URL:/api/v1/basic/dict/item/WO0001/list
+用例期望值：success=true
+实际返回：{"errCode":"11006","errMessage":"无效的token!","success":false} (test_basic_inquire.py:43)
+2022-10-07 21:35:07 [    INFO]___end______end______end______end______end______end___查询可选出库业务类型___end______end______end___ (test_basic_inquire.py:44)
+2022-10-07 21:35:07 [    INFO]----start--------start--------start--------start--------start--------start----查询发货可选方式类型----start--------start--------start--------start--------start--------start---- (test_basic_inquire.py:27)
+2022-10-07 21:35:07 [ WARNING]
+用例ID：WMS_JCCX_09
+用例标题：查询发货可选方式类型
+请求方式：get
+URL:/api/v1/basic/dict/item/WO0002/list
+用例期望值：success=true
+实际返回：{"errCode":"11006","errMessage":"无效的token!","success":false} (test_basic_inquire.py:43)
+2022-10-07 21:35:07 [    INFO]___end______end______end______end______end______end___查询发货可选方式类型___end______end______end___ (test_basic_inquire.py:44)
+2022-10-07 21:35:07 [    INFO]----start--------start--------start--------start--------start--------start----开始拷贝日志文件----start--------start--------start--------start--------start--------start---- (conftest.py:28)

@@ -11,10 +11,10 @@ from common.contants import logger, logs_path
 from common.logs_utill import LogSe
 from test_cases.test_basic.login import login_system
 
-#
-# @pytest.fixture(scope="session", autouse=True)
-# def auto_login_system():
-#     login_system()
+
+@pytest.fixture(scope="session", autouse=True)
+def auto_login_system():
+    login_system()
 
 @pytest.fixture(scope="session", autouse=True)
 def backups_logs():

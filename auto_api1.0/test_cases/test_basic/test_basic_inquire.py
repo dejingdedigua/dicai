@@ -15,14 +15,19 @@ from common.tools import judge_expect
 
 get_data = DoExcel("wms_case.xlsx","基础查询")
 get_case = get_data.read_case()
-conf = ReadConf("test_config.ini")
-get_header = conf.get_option("wms", "headers")
+# conf = ReadConf("test_config.ini")
+# get_header = conf.get_option("wms", "headers")
+
+def setup_module():
+    TestBasicInquire.conf = ReadConf()
+    TestBasicInquire.get_header = json.loads(TestBasicInquire.conf.get_option(option_name="headers"))
+
 class TestBasicInquire:
     @pytest.mark.parametrize("case", get_case)
     def test_inquire_type(self, case):
         logger.info(LogSe.get_start_sep(case.case_title))
-        url = conf.get_option("wms", "base_url") + case.case_url
-        re = requests.get(url,headers=json.loads(get_header))
+        url = self.conf.get_option("wms", "base_url") + case.case_url
+        re = requests.get(url,headers=self.get_header)
 
         re_data_str = re.text
         re_data_dict = re.json()

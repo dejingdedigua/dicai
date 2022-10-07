@@ -24,10 +24,8 @@ def login_system() :
     # logger.info(get_setup_sep("正在读取配置文件中的登录信息"))
     # 实例化配置文件读取器，用于读取配置文件
     read_config = ReadConf("test_config.ini")
-    print(read_config.file_name)
     # 获取配置test.ini文件中的用户密码
     password = read_config.get_option("wms", "password")
-    print(password)
     # 获取配置test.ini文件中的用户名
     user = read_config.get_option("wms", 'user')
 
@@ -60,7 +58,6 @@ def login_system() :
             orc = ddddocr.DdddOcr(old=True)
             # 从图片中识别验证码
             validate_code = orc.classification(base64image)
-            print(validate_code)
             # 将获取到的随机数和验证码临时添加到请求头中（临时添加：在post中添加headers参数，更新使用update方法）
             headers = {
                 "randomStr": random_str,

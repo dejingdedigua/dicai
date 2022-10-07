@@ -1,0 +1,3 @@
+2022-10-07 20:41:58 [    INFO]----start--------start--------start--------start--------start--------start----开始执行登陆操作----start--------start--------start--------start--------start--------start---- (login.py:17)
+2022-10-07 20:41:59 [    INFO]成功登录 (login.py:89)
+2022-10-07 20:42:00 [    INFO]----start--------start--------start--------start--------start--------start----开始拷贝日志文件----start--------start--------start--------start--------start--------start---- (conftest.py:29)

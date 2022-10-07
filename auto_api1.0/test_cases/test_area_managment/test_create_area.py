@@ -14,27 +14,27 @@ from common.logs_utill import LogSe
 from common.tools import dis_template, judge_expect
 
 # 从文件读取case
-get_data = DoExcel("wms_case.xlsx","库区管理","wms")
+get_data = DoExcel("wms_case.xlsx", "库区管理", "wms")
 get_case = get_data.read_case()
 # 获取配置文件读取器
-conf = ReadConf()
-# 获取请求所用header
-get_header = json.loads(conf.get_option(option_name="headers"))
-
+def setup_class():
+    TestArea.conf = ReadConf()
+    TestArea.get_header = json.loads(TestArea.conf.get_option(option_name="headers"))
 class TestArea:
 
     @pytest.mark.parametrize("case",get_case)
     def test_create_area(self, case):
+        # 获取请求所用header
         logger.info(LogSe.get_start_sep(case.case_title))
         # 组合请求接口路径
-        url = conf.get_option("wms", "base_url") + case.case_url
+        url = self.conf.get_option("wms", "base_url") + case.case_url
         # 判断是否有data模板，有模板则先处理模板,并放回处理后的data
         if case.case_data_template:
             case = dis_template(case)
         # 判断请求方式
         if case.case_method.lower() == "post":
             # 发送post请求
-            re = requests.post(url,json=case.case_data,headers=get_header)
+            re = requests.post(url,json=case.case_data,headers=self.get_header)
             # 获取字符串格式返回结果
             re_data_str = re.text
             # 获取字典格式返回结果
@@ -62,7 +62,7 @@ class TestArea:
             assert result
         elif case.case_method.lower() == "get":
             # 发送get请求
-            re = requests.get(url,params=case.case_data,headers=get_header)
+            re = requests.get(url,params=case.case_data,headers=self.get_header)
             # 获取字符串格式返回结果
             re_data_str = re.text
             # 获取字典格式返回结果
